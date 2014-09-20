@@ -415,8 +415,9 @@ background-color:#fff;
 /*---------------------------- VERSION 2.0.0 ---------------------------*/
 
 #header,.mob-nav-menu, #navigation-container, #footer, #showcase-categories, #portfolio-categories ul, #filter-btn.filter-opened, .sidebar-box h4, .portfolio-sidebar h4{
-	background: #e5e5e5;
-	background-image: -webkit-linear-gradient(top, #e5e5e5,#d6d6d6); 
+	background: #000000;
+	border-top: pink 10px solid;
+	/* background-image: -webkit-linear-gradient(top, #e5e5e5,#d6d6d6); */ 
 	background-image: -ms-linear-gradient(bottom,#d6d6d6, #e5e5e5);
 	background-image: -moz-linear-gradient(center bottom,#d6d6d6  0%, #e5e5e5 100%);
 	background-image: -o-linear-gradient(top,#d6d6d6 , #e5e5e5);
@@ -425,8 +426,8 @@ background-color:#fff;
 	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
 }
  #navigation-container{
-	background: url("../images/top_navigation_gradient_w.png") repeat-x;
-	background: url("../images/top_navigation_gradient_w.png"), url("../images/noise_w.png") repeat-x;
+	/* background: url("../images/top_navigation_gradient_w.png") repeat-x; */
+	/* background: url("../images/top_navigation_gradient_w.png"), url("../images/noise_w.png") repeat-x; */
 }
 #header{
 		background: url("../images/noise_w.png") repeat-x;
@@ -436,8 +437,10 @@ background-color:#fff;
 	border: 1px solid #c7c7c7;
 }
  #navigation-container{
- 	border-bottom: 0;
- }
+ 	border-bottom: 10px solid #e80f77;
+ 
+ 	border-top: 10px solid #e80f77;
+}
 .sidebar-box h4, .portfolio-sidebar h4{
 	border: 1px solid #b7b7b7;
 }
