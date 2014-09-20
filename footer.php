@@ -32,7 +32,7 @@ if(get_opt('_show_footer_icons')=='on'){
 											'depth'=>1)); ?>
 </div>
 <div class="footer-spacer alignright"></div>
-<span class="alignright copyrights"><?php echo pex_text('_copyright_text'); ?></span>
+<span class="alignright copyrights">COPYRIGHT &copy; 2014 EKKLESIA CLOTHING</span>
 
 </div> <!-- end #footer-->
 </div> <!-- end #main-container -->
