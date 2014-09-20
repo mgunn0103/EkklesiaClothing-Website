@@ -208,6 +208,8 @@ jQuery(document).ready(function($){
 
 <!--HEADER -->
 	<div id="header">
+    	<!-- The social media buttons -->
+        
 		<div id="logo-container">
 			<?php $logo_image=get_opt('_logo_image');
 			if(empty($logo_image)){
@@ -216,6 +218,11 @@ jQuery(document).ready(function($){
 			}
 			?>
 			<a href="<?php echo home_url(); ?>"><img src="<?php echo $logo_image; ?>" /></a>
+           	<div id="social-media-buttons">
+            	<a target="_blank" href="https://www.facebook.com/EkklesiaClothing"><img src="<?php echo get_template_directory_uri().'/images/icons/facebook.png'; ?>" class="header-icons" /></a>
+                <a target="_blank" href="http://instagram.com/ekklesiaclothing"><img src="<?php echo get_template_directory_uri().'/images/icons/instagram.png'; ?>" class="header-icons" /></a>
+                <a target="_blank" href="https://twitter.com/ekklesiadesigns"><img src="<?php echo get_template_directory_uri().'/images/icons/twitter.png'; ?>" class="header-icons" /></a>
+            </div>
 		</div>
 		 <div class="mobile-nav">
 			<span class="mob-nav-btn"><?php echo pex_text('_menu_text'); ?></span>

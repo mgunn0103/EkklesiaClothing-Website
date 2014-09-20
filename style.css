@@ -3717,6 +3717,8 @@ img.bg-image{
 }
 #logo-container a img{
 	max-width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .info-box, .note-box, .tip-box, .error-box, .tip-box {
@@ -4061,4 +4063,27 @@ max-width: 20%;
 
 .widget_recent_entries li {
 	padding-top: 10px;
+}
+
+#social-media-buttons {
+    width: 200px;
+    position: absolute;
+    top: 40px;
+    right: 10%;
+}
+
+#social-media-buttons .header-icons{
+    margin: 0px 5px 0px 5px;
+}
+
+@media (max-width: 500px)
+{
+	#social-media-buttons {
+		width: 200px;
+		position: relative;
+		margin: 130px auto 10px auto;
+		top:auto;
+		right: auto;
+		
+	}
 }
