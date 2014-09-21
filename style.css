@@ -4076,12 +4076,12 @@ max-width: 20%;
     margin: 0px 5px 0px 5px;
 }
 
-@media (max-width: 500px)
+@media (max-width: 800px)
 {
 	#social-media-buttons {
 		width: 200px;
 		position: relative;
-		margin: 130px auto 10px auto;
+		margin: 0px auto 10px auto;
 		top:auto;
 		right: auto;
 		

@@ -259,8 +259,8 @@ blockquote,
 	margin-right: 2%;
 	display: none;
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 130px;
+	right: 5px;
 }
 
 .mob-nav-btn {
@@ -563,7 +563,7 @@ body.single #full-width .post-content {
 	#logo-container a img {
 		max-height: 100px;
 		max-width: 77%;
-		float: left;
+		/* float: left; */
 	}
 
 	#navigation-container {
