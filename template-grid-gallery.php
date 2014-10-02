@@ -5,8 +5,16 @@
  filtered by a category.
  */
 get_header();
+?>
 
+    <div id="marcus-slider">
 
+    	<div><img src="http://www.lab211.com/ekklesiaclothing/test/wp-content/uploads/2014/09/slider_image_1.png" alt="" /></div>
+        <div id="left-button"></div>
+        <div id="right-button"></div>
+    </div>	
+
+<?php
 if(have_posts()){
 	while(have_posts()){
 		the_post();
@@ -72,6 +80,7 @@ if($page_settings['show_filter']!='false'){
 
 <script type="text/javascript">
 jQuery(document).ready(function($){
+		
 	$('#grid-gallery-wrapper').pexetoGridGallery({
 		"itemsPerPage":<?php echo $page_settings['post_number']; ?>, 
 		"showCategories":<?php echo $page_settings['show_filter']; ?>,
@@ -92,12 +101,28 @@ jQuery(document).ready(function($){
 		"infoText":"<?php echo pex_text("_info_text"); ?>",
 		"pageUrl":"<?php echo $page_url; ?>"
 		});
+		
+	
+		
+		// This will cause the slider to disappear when one of the images are selected
+		jQuery("#grid-gallery").on('click', 'a', function(e){
+			jQuery("#marcus-slider").fadeOut(1500, function(){
+			});
+		});
+	
+		jQuery("#grid-gallery-wrapper").on('click', 'div.back-btn', function(e){
+			jQuery("#marcus-slider").fadeIn(1500);
+		});
+		
+		$(window).on('popstate', function(event) {
+			 jQuery("#marcus-slider").fadeIn(1500);
+		});
+
 });
 </script>
 <?php
 
 //include the after content template
 locate_template( array( 'includes/html-after-content.php'), true, true );
-
 get_footer();
 ?>

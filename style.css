@@ -51,6 +51,41 @@ blockquote:before,blockquote:after,q:before,q:after {
 	content: none;
 }
 
+div#marcus-slider{
+	width:95%;
+	margin:0 auto 50px auto;
+	text-align: center;
+	position: relative;
+}
+
+div#marcus-slider div#left-button{
+	background:#000;
+	width:4%;
+	height:8%;
+	position: absolute;	
+	/* float: left; */
+	left: 0px;
+	top: 48%;
+	z-index: 2;
+}
+
+div#marcus-slider div#right-button{
+	background:#000;
+	width:4%;
+	height:8%;
+	position: absolute;	
+	/* float: right; */
+	top: 48%;
+	z-index: 2;
+	right: 0;
+}
+
+
+div#marcus-slider img {
+	width: 100%;
+	/* text-align: center; */
+}
+
 a {
 	margin: 0;
 	padding: 0;
