@@ -67,6 +67,7 @@ div#marcus-slider div#left-button{
 	left: 0px;
 	top: 48%;
 	z-index: 2;
+	display:none;
 }
 
 div#marcus-slider div#right-button{
@@ -78,12 +79,13 @@ div#marcus-slider div#right-button{
 	top: 48%;
 	z-index: 2;
 	right: 0;
+	display:none;
 }
 
 
 div#marcus-slider img {
 	width: 100%;
-	/* text-align: center; */
+	display:none;/* text-align: center; */
 }
 
 a {

@@ -6,10 +6,17 @@
  */
 get_header();
 ?>
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+
 
     <div id="marcus-slider">
-
-    	<div><img src="http://www.lab211.com/ekklesiaclothing/test/wp-content/uploads/2014/09/slider_image_1.png" alt="" /></div>
+    	<div class="slider">
+        	<img id="1" alt="Autumn Collection 2014" border="0" />
+        	<img id="2" src="http://www.lab211.com/ekklesiaclothing/test/wp-content/uploads/2014/10/slider_image_2.png" alt="Slider Image #2" border="0" />
+            <img id="3" src="http://www.lab211.com/ekklesiaclothing/test/wp-content/uploads/2014/10/slider_image_3.png" alt="Slider Image #3" border="0" />
+        </div>
         <div id="left-button"></div>
         <div id="right-button"></div>
     </div>	
@@ -102,7 +109,11 @@ jQuery(document).ready(function($){
 		"pageUrl":"<?php echo $page_url; ?>"
 		});
 		
-	
+		$(".slider #1").load(function() {
+  			adjustHeight();
+			jQuery(".slider #1").fadeIn(500);
+			startSlider();
+		}).attr('src', 'http://www.lab211.com/ekklesiaclothing/test/wp-content/uploads/2014/09/slider_image_1.png');			
 		
 		// This will cause the slider to disappear when one of the images are selected
 		jQuery("#grid-gallery").on('click', 'a', function(e){
@@ -117,8 +128,43 @@ jQuery(document).ready(function($){
 		$(window).on('popstate', function(event) {
 			 jQuery("#marcus-slider").fadeIn(1500);
 		});
+		
+		window.onorientationchange = function() { 
+			window.location.reload(); 
+			//adjustHeight();
+		};
 
-});
+	});
+
+	function adjustHeight()
+	{
+		sliderHeight = jQuery(".slider #1").height();
+		console.log(sliderHeight + " from load");
+		jQuery("#marcus-slider").css('height', sliderHeight);
+	}
+
+	function startSlider()
+	{
+		jQuery(".slider #1").delay(5500).fadeOut(500);
+		
+		var sc = jQuery(".slider img").size();
+		var count = 2;
+		
+		setInterval(function()
+		{
+			jQuery(".slider #"+count).fadeIn(500);
+			jQuery(".slider #"+count).delay(5500).fadeOut(500);
+			if(count == sc)
+			{
+				count = 1;
+			}
+			else
+			{
+				count = count + 1;
+			}
+		}, 6500);	
+	}
+		
 </script>
 <?php
 
