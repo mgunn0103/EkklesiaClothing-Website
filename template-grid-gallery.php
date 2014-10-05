@@ -14,8 +14,8 @@ get_header();
     <div id="marcus-slider">
     	<div class="slider">
         	<img id="1" alt="Autumn Collection 2014" border="0" />
-        	<img id="2" src="http://www.lab211.com/ekklesiaclothing/test/wp-content/uploads/2014/10/slider_image_2.png" alt="Slider Image #2" border="0" />
-            <img id="3" src="http://www.lab211.com/ekklesiaclothing/test/wp-content/uploads/2014/10/slider_image_3.png" alt="Slider Image #3" border="0" />
+        	<!--<img id="2" src="http://www.lab211.com/ekklesiaclothing/test/wp-content/uploads/2014/10/slider_image_2.png" alt="Slider Image #2" border="0" />
+            <img id="3" src="http://www.lab211.com/ekklesiaclothing/test/wp-content/uploads/2014/10/slider_image_3.png" alt="Slider Image #3" border="0" />-->
         </div>
         <div id="left-button"></div>
         <div id="right-button"></div>
@@ -112,7 +112,7 @@ jQuery(document).ready(function($){
 		$(".slider #1").load(function() {
   			adjustHeight();
 			jQuery(".slider #1").fadeIn(500);
-			startSlider();
+			//startSlider();
 		}).attr('src', 'http://www.lab211.com/ekklesiaclothing/test/wp-content/uploads/2014/09/slider_image_1.png');			
 		
 		// This will cause the slider to disappear when one of the images are selected
